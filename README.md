@@ -21,9 +21,12 @@ cash-rewards-analytics/
 │ | | | ├───  DEV/
 │ | | | ├───  PROD/
 │ | ├── SQL/
-│ | | ├───  Input/
-│ | | ├───  Output/
-│ | | ├───  Report/
+│ | | ├───  Inputs/
+│ | | ├───  Outputs/
+│ | | ├───  Reports/
+│ | | | ├───  Deployment/
+│ | | | ├───  DEV/
+│ | | | ├───  PROD/
 │ | | ├───  Scripts/
 │ | | | ├───  Deployment/
 │ | | | ├───  DEV/
