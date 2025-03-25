@@ -53,6 +53,12 @@ cash-rewards-analytics/
 2. **Copy the template structure**:
    - Go to `shared/Project_template/`
    - Copy the folders into your project folder 
+
+3.  **Proposed naming style of scripts**:
+   - Stored procedure - JIRATICKET_STORED_PROCEDURE_testproc
+   - Table  - JIRATICKET_CREATE_TABLE_testtable
+   - View  - JIRATICKET_CREATE_View_testview
+   - Script - JIRATICKET_testscript
    
 
 # Why We Want to Use Airflow
