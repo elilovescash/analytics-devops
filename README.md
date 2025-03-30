@@ -6,39 +6,63 @@ This is a suggested analytics ways of working for Cash Rewards. It follows struc
 ## Repository Structure
 ```
 cash-rewards-analytics/
+├─Epic/
 ├── projects/
-│ ├── proj-JIRATICKET-lead-lag/
-│ │ ├── sql/
+│ ├── JIRATICKET-proj-/
+│ | ├── Redshift/
+│ | | ├───  Inputs/
+│ | | ├───  Outputs/
+│ | | ├───  Reports/
+│ | | | ├───  Deployment/
+│ | | | ├───  DEV/
+│ | | | ├───  PROD/
+│ | | ├───  Scripts/
+│ | | | ├───  Deployment/
+│ | | | ├───  DEV/
+│ | | | ├───  PROD/
+│ | ├── SQL/
+│ | | ├───  Inputs/
+│ | | ├───  Outputs/
+│ | | ├───  Reports/
+│ | | | ├───  Deployment/
+│ | | | ├───  DEV/
+│ | | | ├───  PROD/
+│ | | ├───  Scripts/
+│ | | | ├───  Deployment/
+│ | | | ├───  DEV/
+│ | | | ├───  PROD/
 │ │ ├── documentation/ # Confluence Integration?
-│ │ ├── qa/ # Data Integrity Checks for /sql
-| | ├── dashboards/ # Sharepoint Integration OR Github LFS (Large File Size)
 │ │ └── airflow/ # Procedure Orchestration
-| | 
-│ ├── proj-JIRATICKET-cashback-rate-performance/
 │ │ ├── ...
 │ └── ...
 ├── shared/
-| ├── templates
-| ├── [...] # Files used by team across Projects.
+| ├── Theme_templates
+| ├── helper_Scripts
+| ├── past_analysis
+| ├── Project_template
 └── docs/
 ```
 
 # Starting a New Project
 1. **Create your project folder**:
-   - Go to the `projects` folder in GitHub
-   - Click "Add file" → "Create new file"
-   - Name it `proj_TICKET-123-project-name/README.md` (replace with actual ticket)
+   - Clone repo locally
+   - In jira make sure to create a parent ticket that will house all tasks of the project, this ticket number will be what is referenced on the GIT parent folder
+   - navigate to the appropriate epic folder 
+   - Create a new project folder
+   - Name it `JIRATICKET-proj` (replace with ticket number of parent ticket created)
+   - for any sub tasks under the parent use this ticket number when entering in new files to the project. IE if project number is DA-1111 then you create a subtask (DA-1112) to add some new scripts the scripts will be DA-1112-STORED_PROCEDURE_testscript stored under the DA-1111 project folder 
    - commit the change
 
 2. **Copy the template structure**:
-   - Go to `shared/templates/project_template`
-   - For each folder you need:
-     - Click on the folder
-     - Click the "..." menu in the top-right corner
-     - Select "Download" to save the folder to your computer
-   - Go to your new project folder
-   - Click "Add file" → "Upload files"
-   - Drag and drop the downloaded folders
+   - Go to `shared/Project_template/`
+   - Copy the folders into your project folder 
+
+3.  **Proposed naming style of scripts**:
+   - Stored procedure - JIRATICKET_STORED_PROCEDURE_testproc
+   - Table  - JIRATICKET_CREATE_TABLE_testtable
+   - View  - JIRATICKET_CREATE_View_testview
+   - Script - JIRATICKET_testscript
+   
 
 # Why We Want to Use Airflow
 
